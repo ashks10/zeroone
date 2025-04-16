@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Percentage {
+    public static void main(String[] args){
+
+        float total = 100;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Marks in Math?");
+        float math = scanner.nextFloat();
+        System.out.println("Marks in Science?");
+        float science = scanner.nextFloat();
+        System.out.println("Marks in physics?");
+        float physics = scanner.nextFloat();
+        System.out.println("Marks in chemistry?");
+        float chemistry = scanner.nextFloat();
+        System.out.println("Marks in biology?");
+        float biology = scanner.nextFloat();
+
+        float percentage = (math+science+chemistry+physics+biology)/500*total;
+        System.out.println(percentage);
+
+        if (percentage>=45.0 && percentage<=100.0){
+            System.out.println("Candidate has Passed");
+        }
+        else {
+            System.out.println("Candidate has failed the Examination");
+        }
+    }
+}
