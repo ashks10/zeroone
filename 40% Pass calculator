@@ -1,0 +1,21 @@
+Scanner scanner = new Scanner(System.in);
+        int total = 100;
+        System.out.println("what is your marks in subject1?");
+        int maths = scanner.nextInt();
+        System.out.println("what is your marks in subject2?");
+        int physics = scanner.nextInt();
+        System.out.println("what is your marks in subject3?");
+        int biology = scanner.nextInt();
+        float percentage = (maths+physics+biology)/300f*total;
+        System.out.println(percentage);
+        if (percentage > 100 || maths > 100 || physics >100 || biology>100) {
+            System.out.println("invalid ENTRY AND percentage count");
+        }
+        else if (percentage >= 40 && maths >= 30 && physics >= 30 && biology>=30){
+            System.out.println("PASS");
+        }
+        else {
+            System.out.println("Fail");
+        }
+
+// calculation of pass or fail with 30 percent in each subject and minimum 40 percentage total
