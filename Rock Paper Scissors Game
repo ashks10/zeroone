@@ -1,0 +1,44 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Rock {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("0 for rock \n1 for scissors \n2 for paper");
+        int game = scanner.nextInt(3);
+        Random random = new Random();
+        int randnum = random.nextInt(3); // 0 1 2
+        System.out.println(randnum);
+
+        switch (game) {
+            case 0 -> System.out.println("ROCK");
+            case 1 -> System.out.println("SCISSORS");
+            case 2 -> System.out.println("PAPER");
+        }
+        switch (randnum) {
+            case 0 -> System.out.println("ROCK");
+            case 1 -> System.out.println("SCISSORS");
+            case 2 -> System.out.println("PAPER");
+        }
+        System.out.println("The winner is : ");
+        if (game == 0 && randnum == 1) {
+            System.out.println("Damn did you just beat a mac!!");
+        } else if (game == 0 && randnum == 2) {
+            System.out.println("Not this time loser");
+        } else if (game == 0 && randnum == 0) {
+            System.out.println("Try again lol");
+        } else if (game == 1 && randnum == 1) {
+            System.out.println("Once again lesgo");
+        }else if (game == 1 && randnum == 2) {
+            System.out.println("You cant beat Me lol");
+        } else if (game == 1 && randnum == 0) {
+            System.out.println("You could never hahaha");
+        } else if (game == 2 && randnum == 1) {
+            System.out.println("we talking now");
+        } else if (game == 2 && randnum == 2) {
+            System.out.println("Nope");
+        } else if (game == 2 && randnum == 0) {
+            System.out.println("Mac is mac blud dont act cool");
+        }
+    }
+}
